@@ -1,7 +1,7 @@
+import flask
 import random
 
-from flask import Flask
-app = Flask(__name__)
+app = flask.Flask(__name__)
 app.config['DEBUG'] = True
 
 # Note: We don't need to call run() since our application is embedded within
@@ -17,7 +17,10 @@ def hello():
 @app.route('/random')
 def random_word():
     """Return a random word."""
-    return random.choice(WORDS)
+    index = random.randint(1, len(WORDS)) - 1
+    word = WORDS[index]
+    response = "{'palabra': '%s', 'index': %d}" % (word, index)
+    return flask.Response(response, mimetype='application/json')
 
 
 @app.errorhandler(404)
