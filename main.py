@@ -12,7 +12,7 @@ WORDS = open("palabras.txt").read().splitlines()
 @app.route('/')
 def hello():
     """Return a friendly HTTP greeting."""
-    return 'Hello World! I\'m Brian!'
+    return 'Hola! Probablemente quieres /random'
 
 @app.route('/random')
 def random_word():
