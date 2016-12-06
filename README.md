@@ -1,3 +1,5 @@
+Word list from: http://corpus.rae.es/frec/5000_formas.TXT
+
 ## Python Flask Skeleton for Google App Engine
 
 ![status: inactive](https://img.shields.io/badge/status-inactive-red.svg)
