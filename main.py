@@ -19,7 +19,7 @@ def random_word():
     """Return a random word."""
     index = random.randint(1, len(WORDS)) - 1
     word = WORDS[index]
-    json = "{'palabra': '%s', 'index': %d}" % (word, index)
+    json = '{"palabra": "%s", "index": %d}' % (word, index)
     response = flask.Response(json, mimetype='application/json')
     response.headers['Access-Control-Allow-Origin'] = '*'
     return response
